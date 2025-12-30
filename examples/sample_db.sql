@@ -109,7 +109,7 @@ ON CONFLICT (email) DO NOTHING;
 
 -- Ürünler
 INSERT INTO products (name, category_id, price, stock_quantity, description) VALUES
-('iPhone 15 Pro', 6, 45999.00, 25, 'Apple iPhone 15 Pro 256GB'),
+('iPhone 15 Pro', 6, 7343.33, 25, 'Apple iPhone 15 Pro 256GB'),
 ('Samsung Galaxy S24', 6, 38999.00, 30, 'Samsung Galaxy S24 128GB'),
 ('MacBook Air M2', 7, 52999.00, 15, 'Apple MacBook Air M2 13 inç'),
 ('Dell XPS 13', 7, 42999.00, 20, 'Dell XPS 13 Dizüstü Bilgisayar'),
