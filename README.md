@@ -1,28 +1,16 @@
-# 🤖 PostgreSQL Doğal Dil Sorgu Agent Sistemi
+#  PostgreSQL Doğal Dil Sorgu Agent Sistemi
 
 PostgreSQL veritabanınıza Türkçe sorular sorun, AI otomatik olarak SQL oluştursun ve çalıştırsın!
 
-## 🎯 Özellikler
-
-- ✅ **Doğal Dil İşleme**: Türkçe sorularınızı anlar ve SQL'e çevirir
-- ✅ **Google Gemini Entegrasyonu**: Güçlü AI ile akıllı sorgu oluşturma
-- ✅ **Güvenlik Odaklı**: Sadece SELECT sorguları, SQL injection koruması
-- ✅ **Schema Intelligence**: Veritabanı yapısını otomatik analiz eder
-- ✅ **İnteraktif CLI**: Kullanıcı dostu komut satırı arayüzü
-- ✅ **Sonuç Açıklama**: AI sonuçları Türkçe olarak açıklar
-
-## 📋 Gereksinimler
+##  Gereksinimler
 
 - Python 3.8+
 - PostgreSQL 12+
 - Google Gemini API Key
 
-## 🚀 Kurulum
+##  Kurulum
 
 ---
-
-
-
 ### 1. Projeyi İndirin
 
 ```bash
@@ -133,7 +121,7 @@ python main.py query "En pahalı ürün hangisi?" --raw
 python main.py test
 ```
 
-## 🎨 Örnek Kullanım Senaryoları
+##  Örnek Kullanım Senaryoları
 
 ### Basit Sorgular
 
@@ -182,7 +170,7 @@ Ortalama sipariş tutarının üzerinde sipariş veren müşteriler kimler?
 - `clear` - Ekranı temizle
 - `exit` veya `quit` - Çıkış
 
-## 🏗️ Proje Yapısı
+##  Proje Yapısı
 
 ```
 dbq/
@@ -213,17 +201,7 @@ dbq/
 └── README.md
 ```
 
-## 🔒 Güvenlik Özellikleri
-
-1. **SQL Injection Koruması**: Parameterized queries ve validasyon
-2. **Komut Kısıtlaması**: Sadece SELECT sorgularına izin
-3. **Blacklist Sistemi**: Tehlikeli komut ve fonksiyonlar engellenir
-4. **Query Complexity Limits**: Çok karmaşık sorguları engelleme
-5. **Timeout Mekanizması**: Maksimum 30 saniye sorgu süresi
-6. **Row Limit**: Maksimum 1000 satır sonuç
-7. **Audit Logging**: Tüm işlemler loglanır
-
-## 🧪 Test
+##  Test
 
 ```bash
 # Tüm testleri çalıştır
@@ -236,7 +214,7 @@ pytest --cov=src
 pytest tests/test_agent.py
 ```
 
-## 📊 Mimari
+##  Mimari
 
 ```
 ┌─────────────┐
@@ -297,70 +275,5 @@ MAX_RESULT_ROWS=1000  # Maksimum satır
 agent = QueryAgent(db_connection, temperature=0.1)
 ```
 
-## 🐛 Sorun Giderme
-
-### Bağlantı Hatası
-
-```
-❌ Veritabanı bağlantısı başarısız!
-```
-
-**Çözüm**: `.env` dosyanızı kontrol edin, PostgreSQL'in çalıştığından emin olun.
-
-### API Key Hatası
-
-```
-Failed to initialize Gemini LLM
-```
-
-**Çözüm**: `GOOGLE_API_KEY` değişkenini kontrol edin.
-
-### Import Hatası
-
-```
-ModuleNotFoundError: No module named 'langchain'
-```
-
-**Çözüm**: Bağımlılıkları yükleyin: `pip install -r requirements.txt`
-
-## 📈 Gelecek Geliştirmeler
-
-- [ ] Konuşma hafızası (önceki sorguları hatırlama)
-- [ ] Görselleştirme (grafik ve chart oluşturma)
-- [ ] Cache sistemi (Redis entegrasyonu)
-- [ ] Multi-database desteği (MySQL, SQLite)
-- [ ] Web UI (Streamlit/Gradio)
-- [ ] REST API (FastAPI)
-- [ ] Export özellikleri (CSV, Excel, JSON)
-- [ ] Query history ve favoriler
-
-## 🤝 Katkıda Bulunma
-
-1. Fork yapın
-2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Commit yapın (`git commit -m 'Add amazing feature'`)
-4. Push yapın (`git push origin feature/amazing-feature`)
-5. Pull Request açın
-
-## 📝 Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır.
-
-## 👨‍💻 Geliştirici
-
-Proje, LangChain ve Google Gemini kullanılarak geliştirilmiştir.
-
-## 🙏 Teşekkürler
-
-- [LangChain](https://langchain.com/) - AI framework
-- [Google Gemini](https://deepmind.google/technologies/gemini/) - LLM
-- [Rich](https://rich.readthedocs.io/) - CLI formatting
-- [Click](https://click.palletsprojects.com/) - CLI framework
-
-## 📞 İletişim
-
-Sorularınız için issue açabilirsiniz.
-
----
 
 **Not**: Bu sistem sadece SELECT sorguları çalıştırır. Veri değiştirme, silme veya veritabanı yapısını değiştirme işlemleri güvenlik nedeniyle engellenmiştir.
