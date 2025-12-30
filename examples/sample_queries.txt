@@ -1,0 +1,83 @@
+# Örnek Doğal Dil Sorguları
+# Bu dosya, sistemi test etmek için kullanılabilecek örnek sorguları içerir
+
+## Basit Sorgular
+
+En çok satan 5 ürünü göster
+Kaç müşterimiz var?
+Bugün kaç sipariş alındı?
+Stokta kaç ürün var?
+Hangi kategorilerde ürün satıyoruz?
+
+## Toplama ve İstatistik Sorguları
+
+Toplam sipariş tutarı ne kadar?
+Ortalama sipariş tutarı nedir?
+En pahalı ürün hangisi?
+En ucuz ürün hangisi?
+Elektronik kategorisindeki ürünlerin ortalama fiyatı nedir?
+
+## Filtreleme Sorguları
+
+İstanbul'dan kaç müşteri var?
+Fiyatı 1000 TL'den pahalı ürünleri listele
+Teslim edilmiş siparişleri göster
+Stokta olmayan ürünler hangileri?
+Son 30 günde kaç yeni müşteri kaydoldu?
+
+## Gruplama ve Sıralama Sorguları
+
+Hangi şehirden en fazla sipariş geldi?
+En çok sipariş veren 3 müşteriyi göster
+Kategorilere göre ürün sayısı nedir?
+Hangi ay en çok satış yapıldı?
+En çok satan kategori hangisi?
+
+## İlişkisel Sorgular
+
+Ahmet Yılmaz'ın siparişlerini göster
+iPhone 15 Pro kaç kez satıldı?
+Bekleyen siparişleri ve müşteri bilgilerini göster
+Her kategoride kaç ürün var?
+Hangi ürünler hiç satılmadı?
+
+## Karmaşık Sorgular
+
+En çok gelir getiren 5 müşteriyi bul
+Ortalama sipariş tutarının üzerinde sipariş veren müşteriler kimler?
+Her şehirden toplam kaç TL sipariş geldi?
+Son 7 günde en çok satan ürünler hangileri?
+Hangi kategoride en fazla stok var?
+
+## Zaman Bazlı Sorgular
+
+Bu ay kaç sipariş teslim edildi?
+Kasım ayında toplam ne kadar satış yapıldı?
+En son ne zaman sipariş alındı?
+Hangi gün en fazla sipariş alındı?
+Geçen hafta kaç yeni müşteri kaydoldu?
+
+## Müşteri Analizi
+
+En sadık müşteri kim? (en çok sipariş veren)
+Hangi müşteri en fazla para harcadı?
+Kaç müşteri birden fazla sipariş verdi?
+İstanbul'daki müşterilerin toplam harcaması ne kadar?
+Aktif müşteri sayısı kaç?
+
+## Ürün Analizi
+
+Hangi ürünün stoğu en az?
+En çok hangi fiyat aralığında ürün var?
+Ortalama ürün fiyatı nedir?
+Kaç farklı ürün satıyoruz?
+Hangi ürünler 1000 TL'nin altında?
+
+## Sipariş Analizi
+
+Ortalama sipariş başına kaç ürün düşüyor?
+En büyük sipariş hangisi?
+Kaç sipariş iptal edildi?
+İşlenmekte olan siparişler hangileri?
+Kargoda olan siparişleri göster
+
