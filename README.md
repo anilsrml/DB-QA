@@ -1,6 +1,10 @@
 #  PostgreSQL Doğal Dil Sorgu Agent Sistemi
 
-PostgreSQL veritabanınıza Türkçe sorular sorun, AI otomatik olarak SQL oluştursun ve çalıştırsın!
+Proje Tanımı
+
+Bu proje, kullanıcıların PostgreSQL veritabanlarını Türkçe doğal dil kullanarak sorgulamasını sağlayan, yapay zeka destekli bir doğal dil sorgu agent sistemidir. Kullanıcılar SQL bilmeden soru sorabilir; sistem bu soruları analiz eder, güvenli SQL sorguları üretir, veritabanında çalıştırır ve sonuçları anlaşılır bir Türkçe açıklama ile sunar.
+
+Proje, LLM tabanlı agent mimarisi, veritabanı güvenliği ve doğal dil işleme konularını gerçekçi bir senaryo üzerinden birleştiren, üretime yakın bir örnek olarak tasarlanmıştır.
 
 ##  Gereksinimler
 
@@ -47,10 +51,17 @@ cp .env.example .env
 `.env` dosyasını düzenleyin:
 
 ```env
-# Google Gemini API Key
-GOOGLE_API_KEY=your_gemini_api_key_here
+# LLM Provider: "ollama" veya "gemini"
+LLM_PROVIDER=ollama
 
-# PostgreSQL Bağlantı Bilgileri
+# Ollama Ayarları
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL=kullanılacak-model
+
+# Gemini (opsiyonel)
+# GOOGLE_API_KEY=...
+
+# PostgreSQL Bağlantı Bilgilerini Girin. Database'i bağlayın.
 DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=ecommerce_db
@@ -64,23 +75,6 @@ MAX_RESULT_ROWS=1000
 # Loglama
 LOG_LEVEL=INFO
 ```
-
-### 5. Örnek Veritabanını Oluşturun (Opsiyonel)
-
-```bash
-# PostgreSQL'e bağlanın
-psql -U postgres
-
-# Veritabanını oluşturun
-CREATE DATABASE ecommerce_db;
-
-# Veritabanına geçin
-\c ecommerce_db
-
-# Schema'yı yükleyin
-\i examples/sample_db.sql
-```
-
 ## 📖 Kullanım
 
 ### İnteraktif Mod (Önerilen)
@@ -109,54 +103,10 @@ Soru: Hangi şehirden en fazla sipariş geldi?
 python main.py query "Kaç müşterimiz var?"
 ```
 
-Ham JSON çıktısı için:
-
-```bash
-python main.py query "En pahalı ürün hangisi?" --raw
-```
-
 ### Bağlantı Testi
 
 ```bash
 python main.py test
-```
-
-##  Örnek Kullanım Senaryoları
-
-### Basit Sorgular
-
-```
-Kaç müşterimiz var?
-Stokta kaç ürün var?
-Bugün kaç sipariş alındı?
-Hangi kategorilerde ürün satıyoruz?
-```
-
-### İstatistik Sorguları
-
-```
-Toplam sipariş tutarı ne kadar?
-Ortalama sipariş tutarı nedir?
-En pahalı ürün hangisi?
-Elektronik kategorisindeki ürünlerin ortalama fiyatı nedir?
-```
-
-### Filtreleme ve Sıralama
-
-```
-İstanbul'dan kaç müşteri var?
-Fiyatı 1000 TL'den pahalı ürünleri listele
-Teslim edilmiş siparişleri göster
-En çok satan 5 ürünü göster
-```
-
-### Karmaşık Sorgular
-
-```
-Hangi şehirden en fazla sipariş geldi?
-En çok sipariş veren 3 müşteriyi göster
-Her kategoride kaç ürün var?
-Ortalama sipariş tutarının üzerinde sipariş veren müşteriler kimler?
 ```
 
 ## 🛠️ CLI Komutları
@@ -252,27 +202,6 @@ pytest tests/test_agent.py
             ┌───────────────┐
             │  PostgreSQL   │
             └───────────────┘
-```
-
-## 🔧 Konfigürasyon
-
-### Timeout Ayarları
-
-```python
-MAX_QUERY_TIMEOUT=30  # Saniye
-```
-
-### Sonuç Limiti
-
-```python
-MAX_RESULT_ROWS=1000  # Maksimum satır
-```
-
-### LLM Ayarları
-
-```python
-# src/agent/core.py içinde
-agent = QueryAgent(db_connection, temperature=0.1)
 ```
 
 
