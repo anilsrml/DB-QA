@@ -1,32 +1,35 @@
-# LLM ve Agent Framework
-langchain==0.3.14
-langchain-google-genai==2.0.6
-langchain-core==0.3.28
-langchain-community==0.3.13
-google-generativeai==0.8.3
+# LLM ve Agent Framework (esnek versiyonlar)
+langchain>=0.3.0
+langchain-community>=0.3.0
+
+# Ollama desteği (Lokal modeller)
+# Ollama kurulu olmalı: https://ollama.ai
+
+# Gemini desteği (Opsiyonel - sadece provider=gemini ise)
+langchain-google-genai>=2.0.0
+google-generativeai>=0.8.0
 
 # Veritabanı
-psycopg2-binary==2.9.9
-SQLAlchemy==2.0.25
+psycopg2-binary>=2.9.9
+SQLAlchemy>=2.0.25
 
 # SQL Parsing ve Validasyon
-sqlparse==0.4.4
+sqlparse>=0.4.4
 
 # CLI ve UI
-click==8.1.7
-rich==13.7.0
+click>=8.1.7
+rich>=13.7.0
 
 # Konfigürasyon
-python-dotenv==1.0.0
+python-dotenv>=1.0.0
 
 # Loglama
-structlog==24.1.0
+structlog>=24.1.0
 
 # Test
-pytest==7.4.4
-pytest-cov==4.1.0
+pytest>=7.4.4
+pytest-cov>=4.1.0
 
 # Yardımcı
-pydantic==2.9.2
-pydantic-settings==2.6.1
-
+pydantic>=2.9.0
+pydantic-settings>=2.6.0
